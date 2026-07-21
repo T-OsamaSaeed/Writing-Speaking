@@ -1,4 +1,4 @@
-const CACHE_NAME = "writing-speaking-pwa-v20260721-info";
+const CACHE_NAME = "writing-speaking-pwa-v20260721-footer-pdf";
 const CORE_ASSETS = [
     "./",
     "./index.html",

@@ -566,14 +566,19 @@
         }
     }
 
-    function updateStatus(unlocked) {
+    function updateStatus(pdfAvailable) {
         if (!statusText) {
             return;
         }
 
-        if (unlocked) {
+        if (pdfAvailable) {
             statusText.textContent =
-                "Ready to save as PDF. Open the print dialog and choose Save as PDF.";
+                "Lesson complete. You can save it as PDF now.";
+            return;
+        }
+
+        if (isComplete) {
+            statusText.textContent = "PDF export is available on the final slide.";
             return;
         }
 
@@ -585,13 +590,14 @@
             ").";
     }
 
-    function updateButtons(unlocked) {
+    function updateButtons(pdfAvailable) {
         if (prevBtn) {
             prevBtn.disabled = currentSlide === 0;
         }
 
         if (nextBtn) {
             nextBtn.disabled = currentSlide === lastSlideIndex;
+            nextBtn.hidden = pdfAvailable;
             nextBtn.innerHTML =
                 currentSlide === lastSlideIndex
                     ? 'Completed <i class="fas fa-check ml-2"></i>'
@@ -599,8 +605,8 @@
         }
 
         if (downloadBtn) {
-            downloadBtn.hidden = !unlocked;
-            downloadBtn.disabled = !unlocked;
+            downloadBtn.hidden = !pdfAvailable;
+            downloadBtn.disabled = !pdfAvailable;
         }
     }
 
@@ -609,12 +615,14 @@
             slide.classList.toggle("active", index === currentSlide);
         });
 
-        if (currentSlide === lastSlideIndex) {
+        const isLastSlide = currentSlide === lastSlideIndex;
+
+        if (isLastSlide) {
             markComplete();
         }
 
-        const unlocked = isComplete || currentSlide === lastSlideIndex;
-        body.classList.toggle("lesson-complete", unlocked);
+        const pdfAvailable = isComplete && isLastSlide;
+        body.classList.toggle("lesson-complete", pdfAvailable);
 
         if (counter) {
             counter.textContent =
@@ -626,8 +634,8 @@
                 String(((currentSlide + 1) / totalSlides) * 100) + "%";
         }
 
-        updateButtons(unlocked);
-        updateStatus(unlocked);
+        updateButtons(pdfAvailable);
+        updateStatus(pdfAvailable);
         writeStorage(lastSlideKey, String(currentSlide));
         updateHash();
         prefetchTranslationsForCurrentSlide();
