@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing & Speaking Prompt Spin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#5954ec">
+  <link rel="stylesheet" href="assets/lesson.css?v=20260720">
+</head>
+<body class="lesson-page bg-slate-100 text-slate-800 font-sans min-h-screen">
+  <div class="lesson-watermark"><div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">T. Osama Saeed</div></div>
+  <div class="lesson-shell">
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <a href="index.html" class="course-home-link inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200"><i class="fas fa-arrow-left"></i>Course Home</a>
+        <div class="sm:text-right"><p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">Random Practice</p><h1 class="text-xl font-black text-slate-900 sm:text-2xl">Prompt Spin</h1></div>
+      </div>
+    </header>
+    <main class="relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8">
+      <section class="w-full max-w-3xl rounded-3xl bg-white p-6 text-center shadow-xl sm:p-10">
+        <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-indigo-50 text-3xl text-indigo-600"><i class="fas fa-shuffle"></i></div>
+        <p class="mt-5 text-xs font-bold uppercase tracking-[0.28em] text-indigo-500">Writing & Speaking</p>
+        <h2 id="prompt" class="mt-4 text-2xl font-black leading-snug text-slate-900 sm:text-4xl">Write a paragraph about one habit that helps you study.</h2>
+        <p class="mt-5 text-sm font-semibold leading-7 text-slate-500">Answer with one clear idea, one reason, and one example.</p>
+        <button id="spin-btn" class="mt-8 inline-flex items-center gap-2 rounded-2xl bg-indigo-600 px-6 py-4 text-base font-black text-white transition-colors hover:bg-indigo-700"><i class="fas fa-rotate"></i>Spin Prompt</button>
+      </section>
+    </main>
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 text-center text-sm font-semibold text-slate-500">T. Osama Saeed</footer>
+  </div>
+  <script>
+    const prompts = ["Write a paragraph about one habit that helps you study.","Speak for one minute about a skill you want to improve.","Explain why clear sentences are important.","Give an opinion, a reason, and an example about online learning.","Describe a time when practice helped you feel more confident.","Write three connected sentences using: idea, reason, example.","Speak about one difficulty in writing and how you can fix it.","Explain what makes a good speaking answer."];
+    document.getElementById('spin-btn').addEventListener('click', function () {
+      const prompt = prompts[Math.floor(Math.random() * prompts.length)];
+      document.getElementById('prompt').textContent = prompt;
+    });
+  </script>
+  <script src="assets/pwa.js?v=20260720" defer></script>
+</body>
+</html>

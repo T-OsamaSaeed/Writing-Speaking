@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing & Speaking Vocabulary & Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#5954ec">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Writing & Speaking">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="assets/lesson.css?v=20260720">
+    <style>
+        .lesson-vocab-main::-webkit-scrollbar { width: 8px; }
+        .lesson-vocab-main::-webkit-scrollbar-track { background: #f1f5f9; }
+        .lesson-vocab-main::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    </style>
+</head>
+<body class="lesson-page print-ready-lesson print-compact-lesson bg-slate-100 text-slate-800 font-sans" data-lesson-title="Vocabulary & Tasks" data-vocab-start-date="2026-07-20">
+    <div class="lesson-watermark">
+        <div class="text-slate-900/[0.04] text-5xl sm:text-8xl lg:text-[10rem] font-black tracking-widest transform -rotate-45 select-none whitespace-nowrap">T. Osama Saeed</div>
+    </div>
+    <div class="lesson-shell">
+    <header class="lesson-header relative z-10 border-b border-white/70 bg-white/90 px-4 py-4 shadow-sm">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a href="index.html" class="course-home-link screen-only inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-200"><i class="fas fa-arrow-left"></i>Course Home</a>
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-[0.35em] text-indigo-500">Writing and Speaking</p>
+                    <h1 class="text-xl font-black text-slate-900 sm:text-2xl">Vocabulary & Tasks</h1>
+                </div>
+            </div>
+            <div class="flex w-full max-w-xl items-center gap-4 lg:ml-auto">
+                <span class="w-14 text-right text-sm font-semibold text-slate-500" id="slide-counter">1 / 1</span>
+                <div class="h-2 flex-1 overflow-hidden rounded-full bg-slate-200"><div id="progress-bar" class="h-full w-full bg-indigo-600"></div></div>
+            </div>
+        </div>
+    </header>
+    <main class="lesson-main lesson-vocab-main print-ready-main print-compact-main relative z-10 flex flex-1 items-center justify-center p-4 sm:p-8" id="touch-area">
+        <div id="selected-day-container" class="w-full"></div>
+    </main>
+    <footer class="lesson-footer relative z-10 border-t border-white/70 bg-white/90 px-4 py-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.08)]">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div class="flex flex-col gap-2 text-sm text-slate-600 sm:flex-row sm:items-center sm:gap-3">
+                <span class="font-semibold text-slate-700">Vocabulary & Tasks</span>
+                <span class="hidden h-4 w-px bg-slate-300 sm:inline-block"></span>
+                <p id="lesson-status">Ready to save this day as PDF.</p>
+                <span class="hidden h-4 w-px bg-slate-300 lg:inline-block"></span>
+                <p class="font-semibold text-slate-500">T. Osama Saeed</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+                <button id="download-btn" class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-white transition-colors hover:bg-emerald-600"><i class="fas fa-file-pdf"></i> Save as PDF</button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const lessonData = [
+          {
+                    "ready": true,
+                    "title": "Week 1 - Foundation",
+                    "subtitle": "Day 1",
+                    "words": [
+                              [
+                                        "foundation",
+                                        "temel",
+                                        "a strong foundation",
+                                        "güçlü bir temel",
+                                        "A strong foundation makes writing and speaking easier.",
+                                        "Güçlü bir temel yazmayı ve konuşmayı kolaylaştırır."
+                              ],
+                              [
+                                        "idea",
+                                        "fikir",
+                                        "one clear idea",
+                                        "tek net fikir",
+                                        "Start every answer with one clear idea.",
+                                        "Her cevaba tek net fikirle başlayın."
+                              ],
+                              [
+                                        "organize",
+                                        "düzenlemek",
+                                        "organize your answer",
+                                        "cevabını düzenlemek",
+                                        "You should organize your answer before you speak.",
+                                        "Konuşmadan önce cevabınızı düzenlemelisiniz."
+                              ],
+                              [
+                                        "explain",
+                                        "açıklamak",
+                                        "explain the reason",
+                                        "nedeni açıklamak",
+                                        "Explain the reason after you give your opinion.",
+                                        "Fikrinizi verdikten sonra nedeni açıklayın."
+                              ],
+                              [
+                                        "example",
+                                        "örnek",
+                                        "give an example",
+                                        "örnek vermek",
+                                        "A short example can make your answer stronger.",
+                                        "Kısa bir örnek cevabınızı daha güçlü yapabilir."
+                              ],
+                              [
+                                        "detail",
+                                        "detay",
+                                        "add details",
+                                        "detay eklemek",
+                                        "Add details to make your writing more complete.",
+                                        "Yazınızı daha tamamlamak için detay ekleyin."
+                              ],
+                              [
+                                        "draft",
+                                        "taslak",
+                                        "write a draft",
+                                        "taslak yazmak",
+                                        "Write a draft before you prepare the final paragraph.",
+                                        "Son paragrafı hazırlamadan önce bir taslak yazın."
+                              ],
+                              [
+                                        "revise",
+                                        "gözden geçirmek",
+                                        "revise your paragraph",
+                                        "paragrafını gözden geçirmek",
+                                        "Revise your paragraph and fix unclear sentences.",
+                                        "Paragrafınızı gözden geçirin ve net olmayan cümleleri düzeltin."
+                              ],
+                              [
+                                        "fluent",
+                                        "akıcı",
+                                        "sound fluent",
+                                        "akıcı duyulmak",
+                                        "Slow practice can help you sound more fluent.",
+                                        "Yavaş pratik daha akıcı duyulmanıza yardımcı olabilir."
+                              ],
+                              [
+                                        "confidence",
+                                        "özgüven",
+                                        "build confidence",
+                                        "özgüven geliştirmek",
+                                        "Daily speaking practice helps build confidence.",
+                                        "Günlük konuşma pratiği özgüven geliştirmeye yardımcı olur."
+                              ],
+                              [
+                                        "sentence",
+                                        "cümle",
+                                        "clear sentence",
+                                        "net cümle",
+                                        "A clear sentence is better than a long confusing one.",
+                                        "Net bir cümle uzun ve karışık bir cümleden daha iyidir."
+                              ],
+                              [
+                                        "respond",
+                                        "cevap vermek",
+                                        "respond clearly",
+                                        "net cevap vermek",
+                                        "Respond clearly and then add one reason.",
+                                        "Net cevap verin ve sonra bir neden ekleyin."
+                              ]
+                    ],
+                    "wIntro": "Write a short paragraph about:",
+                    "wIntroTR": "Şu konuda kısa bir paragraf yazın:",
+                    "wTopic": "Why a strong foundation is important for writing and speaking",
+                    "wTopicTR": "Yazma ve konuşma için güçlü bir temelin neden önemli olduğu",
+                    "wRule": "Use at least 6 words from today's list.",
+                    "wRuleTR": "Bugünün listesinden en az 6 kelime kullanın.",
+                    "sIntro": "Send one voice recording and answer:",
+                    "sIntroTR": "Bir ses kaydı gönderin ve cevaplayın:",
+                    "sTopic": "What helps you answer more clearly?",
+                    "sTopicTR": "Daha net cevap vermenize ne yardımcı olur?",
+                    "sRule": "Use at least 4 words from today's list.",
+                    "sRuleTR": "Bugünün listesinden en az 4 kelime kullanın."
+          },
+          {
+                    "ready": false,
+                    "title": "Day 2",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 3",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 4",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 5",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 6",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 7",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 8",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 9",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 10",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 11",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          },
+          {
+                    "ready": false,
+                    "title": "Day 12",
+                    "subtitle": "Locked",
+                    "words": [],
+                    "wIntro": "",
+                    "wIntroTR": "",
+                    "wTopic": "",
+                    "wTopicTR": "",
+                    "wRule": "",
+                    "wRuleTR": "",
+                    "sIntro": "",
+                    "sIntroTR": "",
+                    "sTopic": "",
+                    "sTopicTR": "",
+                    "sRule": "",
+                    "sRuleTR": ""
+          }
+];
+
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const msg = new SpeechSynthesisUtterance(text);
+                msg.lang = 'en-US';
+                msg.rate = 0.9;
+                window.speechSynthesis.speak(msg);
+            } else {
+                alert("Sorry, your browser doesn't support text-to-speech.");
+            }
+        }
+
+        const vocabProgramKey = "writing-speaking:vocab-program:start-date";
+        const vocabDayCompletionPrefix = "writing-speaking:vocab-day:";
+
+        function getLocalMidnight(date) { return new Date(date.getFullYear(), date.getMonth(), date.getDate()); }
+        function formatDateKey(date) { return date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0"); }
+        function parseDateKey(value) {
+            const match = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            return match ? new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3])) : null;
+        }
+        function getConfiguredStartDate() { return parseDateKey(document.body.dataset.vocabStartDate); }
+        function readProgramStartDate() {
+            try { return parseDateKey(localStorage.getItem(vocabProgramKey)); } catch (error) { return null; }
+        }
+        function writeProgramStartDate(value) {
+            try { localStorage.setItem(vocabProgramKey, formatDateKey(value)); } catch (error) { return; }
+        }
+        function getCompletionKey(dayNumber) { return vocabDayCompletionPrefix + String(dayNumber) + ":completed"; }
+        function readDayCompletion(dayNumber) {
+            try { return localStorage.getItem(getCompletionKey(dayNumber)) === "true"; } catch (error) { return false; }
+        }
+        function writeDayCompletion(dayNumber) {
+            try { localStorage.setItem(getCompletionKey(dayNumber), "true"); } catch (error) { return; }
+        }
+        function addDays(date, offset) {
+            const result = new Date(date);
+            result.setDate(result.getDate() + offset);
+            return getLocalMidnight(result);
+        }
+        function formatDisplayDate(date) {
+            return new Intl.DateTimeFormat("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" }).format(date);
+        }
+        function getProgramState(totalDays) {
+            const today = getLocalMidnight(new Date());
+            const configuredStartDate = getConfiguredStartDate();
+            let startDate = configuredStartDate || readProgramStartDate();
+            if (!startDate || startDate.getTime() > today.getTime()) {
+                startDate = configuredStartDate || today;
+                if (!configuredStartDate) { writeProgramStartDate(startDate); }
+            }
+            const dayDifference = Math.floor((today.getTime() - startDate.getTime()) / 86400000);
+            return { today: today, startDate: startDate, activeDayNumber: Math.max(1, Math.min(totalDays, dayDifference + 1)) };
+        }
+        function getRequestedDayNumber() {
+            const params = new URLSearchParams(window.location.search);
+            const directDay = Number(params.get('day'));
+            return Number.isFinite(directDay) && directDay >= 1 && directDay <= lessonData.length ? directDay : null;
+        }
+        function updatePageFrame(titleText, statusMessage, showDownload) {
+            const pageTitle = document.querySelector('header h1');
+            const statusText = document.getElementById('lesson-status');
+            const downloadButton = document.getElementById('download-btn');
+            if (pageTitle) { pageTitle.textContent = titleText; }
+            if (statusText) { statusText.textContent = statusMessage; }
+            if (downloadButton) {
+                downloadButton.classList.toggle('hidden', !showDownload);
+                downloadButton.disabled = !showDownload;
+                downloadButton.setAttribute('aria-hidden', String(!showDownload));
+            }
+        }
+        function buildWordTable(dayData) {
+            let tableHTML = '<div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white w-full"><table class="w-full text-left border-collapse min-w-[700px]"><thead class="sticky top-0 z-20"><tr class="bg-indigo-50 border-b border-slate-200"><th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/5">Word</th><th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/5">Meaning</th><th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider w-1/4">Collocation</th><th class="p-3 sm:p-4 text-xs sm:text-sm font-bold text-indigo-800 uppercase tracking-wider">Example</th></tr></thead><tbody class="divide-y divide-slate-100">';
+            dayData.words.forEach(function (wordObj) {
+                const word = wordObj[0], turkish = wordObj[1], collocation = wordObj[2], colTR = wordObj[3], example = wordObj[4], exTR = wordObj[5];
+                tableHTML += '<tr class="hover:bg-slate-50 transition-colors group"><td class="p-3 sm:p-4 align-top"><div class="flex items-center gap-2"><span class="font-bold text-indigo-700 text-base sm:text-lg">' + word + '</span><button onclick="playAudio(\'' + word.replace(/'/g, "\\'") + '\')" class="text-indigo-400 hover:text-indigo-600 bg-indigo-50 hover:bg-indigo-100 w-7 h-7 rounded-full flex items-center justify-center transition-colors focus:outline-none" title="Listen"><i class="fas fa-volume-up text-xs"></i></button></div></td><td class="p-3 sm:p-4 align-top"><span class="text-sm font-bold text-slate-600">' + turkish + '</span></td><td class="p-3 sm:p-4 align-top"><p class="font-bold text-slate-800 text-sm">' + collocation + '</p><p class="text-xs text-slate-500 mt-1">' + colTR + '</p></td><td class="p-3 sm:p-4 align-top"><p class="text-sm font-medium text-slate-800 italic">"' + example + '"</p><p class="text-xs text-slate-500 mt-1 italic">' + exTR + '</p></td></tr>';
+            });
+            return tableHTML + '</tbody></table></div>';
+        }
+        function renderSelectedDay(dayData, isCompleted) {
+            const container = document.getElementById('selected-day-container');
+            updatePageFrame('Vocabulary & Tasks: ' + dayData.title, isCompleted ? dayData.title + ' is completed and ready to save again as PDF.' : dayData.title + ' is ready to save as PDF.', true);
+            document.title = 'Vocabulary & Tasks - ' + dayData.title;
+            container.innerHTML = '<div class="slide active flex-col w-full max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 z-10 mb-8 mt-2"><div class="flex flex-col gap-4 border-b-2 border-slate-100 pb-4 sm:flex-row sm:items-end sm:justify-between"><div><p class="text-xs sm:text-sm font-bold text-indigo-500 uppercase tracking-widest mb-1">' + dayData.subtitle + '</p><h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">' + dayData.title + '</h2></div><div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-semibold text-indigo-700"><i class="fas fa-language"></i>Daily Vocabulary</div></div><div class="mt-6 w-full relative">' + buildWordTable(dayData) + '</div><div class="mt-6 grid grid-cols-1 gap-4 border-t border-slate-200 pt-4 md:grid-cols-2"><div class="bg-blue-50 p-4 sm:p-5 rounded-xl border border-blue-200 shadow-sm relative overflow-hidden flex flex-col"><div class="absolute -right-4 -top-4 text-blue-200 text-6xl opacity-30"><i class="fas fa-pen-nib"></i></div><h3 class="font-bold text-blue-800 mb-2 flex items-center uppercase tracking-wide text-xs relative z-10"><i class="fas fa-pen-square mr-2"></i>Writing Task</h3><p class="text-sm text-slate-600 font-medium relative z-10">' + dayData.wIntro + '<br><span class="text-xs text-slate-500">' + dayData.wIntroTR + '</span></p><p class="text-base sm:text-lg font-bold text-blue-900 mt-2 mb-1 relative z-10 leading-snug">' + dayData.wTopic + '</p><p class="text-sm text-blue-700/80 font-medium mb-3 relative z-10 leading-snug">' + dayData.wTopicTR + '</p><div class="mt-auto"><p class="text-xs font-bold text-blue-600 bg-white inline-block px-2 py-1 rounded shadow-sm relative z-10">' + dayData.wRule + '<span class="block text-[10px] text-blue-400 font-normal mt-0.5">' + dayData.wRuleTR + '</span></p></div></div><div class="bg-emerald-50 p-4 sm:p-5 rounded-xl border border-emerald-200 shadow-sm relative overflow-hidden flex flex-col"><div class="absolute -right-4 -top-4 text-emerald-200 text-6xl opacity-30"><i class="fas fa-microphone"></i></div><h3 class="font-bold text-emerald-800 mb-2 flex items-center uppercase tracking-wide text-xs relative z-10"><i class="fas fa-microphone-alt mr-2"></i>Speaking Task</h3><p class="text-sm text-slate-600 font-medium relative z-10">' + dayData.sIntro + '<br><span class="text-xs text-slate-500">' + dayData.sIntroTR + '</span></p><p class="text-base sm:text-lg font-bold text-emerald-900 mt-2 mb-1 relative z-10 leading-snug">' + dayData.sTopic + '</p><p class="text-sm text-emerald-700/80 font-medium mb-3 relative z-10 leading-snug">' + dayData.sTopicTR + '</p><div class="mt-auto"><p class="text-xs font-bold text-emerald-600 bg-white inline-block px-2 py-1 rounded shadow-sm relative z-10">' + dayData.sRule + '<span class="block text-[10px] text-emerald-400 font-normal mt-0.5">' + dayData.sRuleTR + '</span></p></div></div></div></div>';
+        }
+        function renderLockedDay(requestedDayNumber, programState) {
+            const container = document.getElementById('selected-day-container');
+            const requestedDayData = lessonData[requestedDayNumber - 1];
+            const unlockDate = addDays(programState.startDate, requestedDayNumber - 1);
+            const reason = requestedDayData && requestedDayData.ready === false ? "This day will open after the words are uploaded." : "This day will open on " + formatDisplayDate(unlockDate) + ".";
+            updatePageFrame('Vocabulary & Tasks: Day ' + requestedDayNumber, 'Day ' + requestedDayNumber + ' is locked today.', false);
+            document.title = 'Vocabulary & Tasks - Day ' + requestedDayNumber;
+            container.innerHTML = '<div class="slide active flex-col w-full max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-5 sm:p-8 z-10 mb-8 mt-2"><div class="rounded-3xl border border-indigo-100 bg-indigo-50/70 p-6 text-center sm:p-8"><div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white text-2xl text-indigo-600 shadow-sm"><i class="fas fa-lock"></i></div><p class="mt-4 text-xs font-bold uppercase tracking-[0.28em] text-indigo-500">Locked Day</p><h2 class="mt-3 text-2xl font-black text-slate-900 sm:text-3xl">Day ' + requestedDayNumber + '</h2><p class="mt-4 text-base leading-8 text-slate-600">' + reason + '</p><p class="mt-2 text-sm font-semibold text-slate-500">Today\'s open day is <span class="text-indigo-700">Day 1</span>.</p><div class="mt-6 flex flex-wrap items-center justify-center gap-3"><a href="Vocabulary & Tasks.html?day=1" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"><i class="fas fa-unlock"></i>Open Today\'s Day</a><a href="index.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-50"><i class="fas fa-arrow-left"></i>Course Home</a></div></div></div>';
+        }
+        const programState = getProgramState(lessonData.length);
+        const requestedDayNumber = getRequestedDayNumber();
+        const selectedDayNumber = requestedDayNumber || 1;
+        const selectedDay = lessonData[selectedDayNumber - 1];
+        let activeRenderableDayNumber = null;
+        if (selectedDayNumber <= programState.activeDayNumber && selectedDay && selectedDay.ready !== false) {
+            activeRenderableDayNumber = selectedDayNumber;
+            renderSelectedDay(selectedDay, readDayCompletion(selectedDayNumber));
+        } else {
+            renderLockedDay(selectedDayNumber, programState);
+        }
+        window.addEventListener('afterprint', function () {
+            if (activeRenderableDayNumber === null) { return; }
+            writeDayCompletion(activeRenderableDayNumber);
+            renderSelectedDay(lessonData[activeRenderableDayNumber - 1], true);
+        });
+        document.getElementById('download-btn').addEventListener('click', function () {
+            if (this.disabled) { return; }
+            window.print();
+        });
+    </script>
+    </div>
+    <script src="assets/pwa.js?v=20260720" defer></script>
+</body>
+</html>
