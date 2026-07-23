@@ -1,4 +1,4 @@
-const CACHE_NAME = "writing-speaking-pwa-v20260721-footer-pdf";
+const CACHE_NAME = "writing-speaking-pwa-v20260722-lesson2";
 const CORE_ASSETS = [
     "./",
     "./index.html",
@@ -6,12 +6,13 @@ const CORE_ASSETS = [
     "./assets/pwa-icon-192.png",
     "./assets/pwa-icon-512.png",
     "./assets/apple-touch-icon.png",
+    "./assets/favicon-32.png",
+    "./assets/favicon-16.png",
     "./assets/platform.css",
     "./assets/platform.js",
     "./assets/lesson.css",
     "./assets/lesson.js",
-    "./assets/pwa.js",
-    "./assets/site-icon.svg"
+    "./assets/pwa.js"
 ];
 
 self.addEventListener("install", function (event) {
