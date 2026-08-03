@@ -1,4 +1,4 @@
-const CACHE_NAME = "writing-speaking-pwa-v20260729-lesson5";
+const CACHE_NAME = "writing-speaking-pwa-v20260803-lesson6";
 const CORE_ASSETS = [
     "./",
     "./index.html",
